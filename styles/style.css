@@ -1,428 +1,274 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Mulish:wght@300;400;600;700&display=swap");
 /*Основные*/
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+
+html {
+  overflow-x: hidden;
+  margin-right: calc(-1 * (100vw - 100%));
 }
+span {
+  font-weight: 1000;
+  opacity: 1;
+  color: rgba(31, 21, 52, 1);
+}
+
 a {
   text-decoration: none;
+  color: #1f1534;
+}
+* {
+  box-sizing: border-box;
 }
 
-/*Логотип сайта с ссылками навигации*/
-.header-nav {
-  background-color: #0c73fe;
-  width: 100%;
-  top: 0;
-  left: 0;
-  position: fixed;
-}
-.navbar {
-  height: 75px;
-  display: flex;
-  justify-content: space-between;
-  margin: 0 261px;
-  padding: 0 20px;
-  align-items: center;
-}
-
-/*Стили для логотипа*/
-.navbar-logo img {
-  max-width: 144px;
-  height: 30px;
-  object-fit: cover;
-}
-
-/*Стили для кнопок навигации*/
-.navbar-controls_links {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  text-align: center;
-}
-.navbar-controls_links a {
-  font-weight: 500;
-  font-size: 16px;
-  color: #fff;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-}
-/*Отдельные стили для кнопок ( сделал небольшую анимацию )*/
-.profile {
-  height: 40px;
-  background-color: #0c73fe;
-  display: flex;
-  align-items: center;
-  margin-right: 10px;
-  padding: 3%;
-  transition-duration: 0.5s;
-  border-radius: 10px;
-  cursor: pointer;
-}
-.buy {
-  height: 40px;
-  background-color: #0c73fe;
-  display: flex;
-  align-items: center;
-  margin-right: 10px;
-  padding: 3%;
-  transition-duration: 0.5s;
-  border-radius: 10px;
-  cursor: pointer;
-}
-.lang {
-  height: 40px;
-  background-color: #0c73fe;
-  display: flex;
-  align-items: center;
-  padding: 3%;
-  transition-duration: 0.5s;
-  border-radius: 10px;
-  cursor: pointer;
-}
-.lang:hover,
-.buy:hover,
-.profile:hover {
-  background-color: rgb(205, 212, 222);
-  background: rgba(205, 212, 222, 0.5);
-  border-radius: 10px;
-  transition-duration: 0.8s;
-}
-
-/*Сама шапка сайта*/
+/*Шапка*/
 .header {
-  width: 100%;
-  padding: 100px 20px 0;
-  margin: 0 0 30px;
-  background-color: #0c73fe;
-  color: #fff;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  z-index: 20;
-}
-
-/*Стили для текста и навигации*/
-.header-title h1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 44px;
-  margin-bottom: 20px;
-  font-weight: 700;
-}
-.header-title-form {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 60px;
-  font-size: 17px;
-  font-weight: 600;
-}
-.header-links {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-.header-links a {
-  color: #fff;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-}
-
-/*Более подробные стили для текста ( тут тоже анимация при  навидении )*/
-.bileti {
-  background-color: #ffffff;
-  display: flex;
-  align-items: center;
-  margin-right: 10px;
-  padding: 1%;
-  border-radius: 20px;
-  color: #0c73fe;
-  font-weight: 600;
-}
-.hostels {
-  text-align: center;
-  background-color: #0c73fe;
-  display: flex;
-  align-items: center;
-  margin-right: 10px;
-  padding: 1%;
-  transition-duration: 0.5s;
-  border-radius: 20px;
-  font-weight: 600;
-  cursor: pointer;
-}
-.buisness {
-  background-color: #0c73fe;
-  display: flex;
-  align-items: center;
-  padding: 1%;
-  transition-duration: 0.5s;
-  border-radius: 20px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.buisness:hover,
-.hostels:hover {
-  background-color: rgb(205, 212, 222);
-  background: rgba(205, 212, 222, 0.5);
-  border-radius: 20px;
-  transition-duration: 0.8s;
-}
-
-/*Хотел сделать побольше пространства*/
-.header-bg {
-  height: 100px;
-  background-color: #0c73fe;
-}
-
-/*Блок с инфой , самый прикольный в этой верстке*/
-.header-information-block {
-  display: flex;
-  justify-content: center;
-  background-color: #fff;
-  z-index: 25;
-  margin: -90px auto 0 auto;
-  max-width: 730px;
-  border-radius: 20px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-.header-information {
   display: flex;
   justify-content: space-between;
-  padding: 16px 16px 16px 16px;
-}
-.header-information-text {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  max-width: 256px;
-}
-.header-information-text hr {
-  margin-top: 5px;
-  border: none;
-  background-color: #b983f1;
-  width: 95px;
-  height: 4px;
-  border-radius: 10px;
-}
-.header-information-text h2 {
-  font-size: 26px;
-}
-.header-information-text p {
-  font-size: 17px;
-  margin-top: 20px;
+  box-sizing: border-box;
 }
 
-/*Этот див , заставил написать дофига строчек...*/
-.button {
-  margin-top: 53px;
-  background-color: #fff;
-  color: black;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  transition-duration: 0.3s;
-  font-weight: 600;
-  max-width: 195px;
-  height: 50px;
-  padding: 3%;
-  border-radius: 15px;
-  cursor: pointer;
-}
-.button:hover {
-  background-color: rgb(170, 175, 183);
-  background: rgba(205, 212, 222, 0.9);
-  border-radius: 15px;
-  transition-duration: 0.3s;
-}
-.header-information-img img {
-  border-radius: 20px;
-}
-
-/*Самая красивая штука :)*/
-.welcome {
-  margin-top: 50px;
-}
-.welcome-video video {
-  width: 800px;
-  border-radius: 20px;
-}
-.welcome-video {
-  margin-left: 110px;
-}
-.welcome-content {
-  display: flex;
-  justify-content: space-between;
-}
-.welcome-title p {
-  background-color: #ffffff;
+.logo {
+  margin-top: 56px;
+  margin-left: 191px;
   display: flex;
   align-items: center;
-  text-align: center;
-  padding: 1%;
-  transition-duration: 0.5s;
-  border-radius: 20px;
-  font-size: 0.9375rem;
-  font-weight: 400;
-  line-height: 1.1875rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  width: 100%;
-  height: 50px;
-  cursor: pointer;
+  padding-right: 15px;
 }
-.welcome-title {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  display: flex;
-  align-items: center;
-  margin-right: 110px;
+.logo_img {
+  height: 41px;
+  width: 41px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: block;
 }
-.fa-link {
-  margin-left: 15px;
-}
-.fa-user,
-.fa-ticket,
-.fa-language {
-  color: #fff;
-  margin-right: 15px;
-}
-.welcome-title p:hover {
-  background: rgba(205, 212, 222, 0.5);
-  border-radius: 20px;
-  transition-duration: 0.3s;
-}
-
-/*Тут мы применим карточки , уффф*/
-.content {
-  max-width: 1130px;
-  margin: 0 auto;
-  display: flex;
-  flex-flow: column nowrap;
-  padding: 80px 0 0;
-}
-.content-title {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-}
-.content-title_title {
-  text-align: center;
-  margin: 20px auto;
-  font-size: 2.125rem;
+.logo_text {
+  margin-left: 12px;
+  font-size: 24px;
+  line-height: 30px;
+  font-family: "Mulish", sans-serif;
   font-weight: 700;
-  line-height: 2.75rem;
-  font-variant-numeric: lining-nums;
+  color: #233348;
 }
 
-.content-title_text {
-  text-align: center;
-  font-size: 1.0625rem;
-  font-weight: 400;
-  line-height: 1.5625rem;
-  margin: 15px auto 20px;
-}
-.content-cards {
-  display: flex;
-  justify-content: center;
-  margin: 30px auto 0 auto;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-}
-.card,
-.kabinet,
-.motel {
-  display: flex;
-  flex-flow: column nowrap;
-  width: 230px;
-  height: 290px;
-  padding: 20px;
-  border-radius: 10px;
-  transition-duration: 0.3s;
-  margin-left: 20px;
-}
-.card img,
-.kabinet img,
-.motel img {
-  margin: 0 auto;
-}
-
-.content-cards p {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 0.875rem;
-  margin: 0 5px;
-}
-
-.content-cards h3 {
-  font-size: 1.0625rem;
-  font-weight: 700;
-  line-height: 1.375rem;
-  margin: 10px 5px 5px;
-}
-
-.content-cards a {
-  color: #0c73fe;
-  font-size: 12px;
-  background-color: #fff;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  transition-duration: 0.3s;
-  font-weight: 600;
-  max-width: 195px;
-  height: 50px;
-  padding: 3%;
-  border-radius: 10px;
-  border: 1px solid #0c73fe;
-  justify-content: center;
-  margin-top: 10px;
-}
-.content-cards a:hover {
-  color: #fff;
-  background-color: #0c73fe;
-}
-.card:hover,
-.kabinet:hover,
-.motel:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  transition-duration: 0.3s;
-  border-radius: 10px;
-}
-.fa-telegram,
-.fa-twitter,
-.fa-instagram,
-.fa-facebook,
-.fa-vk {
-  color: #0c73fe;
-  margin-right: 5px;
-}
-.links a {
-  color: #0c73fe;
-  font-size: 13px;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-}
 .links {
-  margin-right: 200px;
-  background-color: #ffffff;
   display: flex;
   align-items: center;
-  transition-duration: 0.5s;
-  border-radius: 20px;
-  font-weight: 600;
+  list-style: none;
+  margin-right: 192px;
+  margin-top: 70px;
 }
-.footer {
+
+.nav {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.nav > li {
+  margin-left: 40px;
+  font-family: "Mulish", sans-serif;
+  font-weight: 400;
+  height: 23px;
+}
+
+/*Контент Зона ( Основная )*/
+.welcome {
+  width: 100%;
+  margin-left: 191px;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+}
+.welcome_text {
+  font-family: "Mulish", sans-serif;
+  font-weight: 300;
+  height: 32px;
+  font-size: 21px;
+  width: 500px;
+  height: 338px;
+}
+.welcome_text p {
+  color: rgba(125, 121, 135, 1);
+}
+.welcome_img {
+  background-image: url(../img/main_img.png);
+  margin-top: 84px;
+  margin-left: 255px;
+  margin-right: 163px;
+  width: 693px;
+  height: 598px;
+}
+.button {
+  background-image: url(../img/obj.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: block;
+  height: 56px;
+  width: 200px;
+  border: none;
+  outline: none;
+  font-family: "Muli";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  color: #ffffff;
+  mix-blend-mode: normal;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  appearance: none;
+  touch-action: manipulation;
+}
+/*2 часть*/
+.classes {
+  width: 100%;
+  margin: 356px auto 54px;
+}
+/*Стили для шапки*/
+.classes_header_head {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 56px;
+  text-align: center;
+  align-items: center;
+}
+.classes hr {
+  width: 56px;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin: 26px auto 33px;
+  align-items: center;
+}
+.classes_header_text {
+  height: 60px;
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  color: #7d7987;
+  mix-blend-mode: normal;
+  text-align: center;
+  align-items: center;
+}
+/*Карточки*/
+.services {
+  width: 1123px;
+  margin: 80px auto;
+  display: grid;
+  grid-template-rows: 350px 350px;
+  grid-template-columns: 350px 350px 350px;
+  grid-gap: 36px;
+  align-items: center;
+}
+.services-item {
+  padding: 54px 45px 47px 37px;
+}
+.services-item h3 {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 56px;
+  color: #000000;
+  mix-blend-mode: normal;
+}
+.services-item p {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  color: #7d7987;
+  mix-blend-mode: normal;
+}
+.services-item1 {
+  padding: 54px 45px 47px 37px;
+}
+
+.services-item1 h3 {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 56px;
+  color: #000000;
+  mix-blend-mode: normal;
+}
+.services-item1 p {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 28px;
+  color: #7d7987;
+  mix-blend-mode: normal;
+}
+.button-item {
+  margin-top: 69px;
   display: flex;
   justify-content: center;
-}
-.footer-links {
-  display: flex;
   align-items: center;
-  height: 100px;
 }
-.links:last-child {
-  margin-right: 0;
+.btn-item {
+  border: 1.4px solid #458ff6;
+  border-radius: 55px;
+  height: 56px;
+  width: 200px;
+  font-family: "Muli";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  color: #458ff6;
+  mix-blend-mode: normal;
+  cursor: pointer;
+  user-select: none;
+  appearance: none;
+  touch-action: manipulation;
+}
+.scnd {
+  flex-direction: row-reverse;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.block-text h4 {
+  height: 112px;
+  width: 481px;
+  font-family: "Muli";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 56px;
+  margin: 0;
+}
+.block-text p {
+  height: 128px;
+  width: 450px;
+  font-family: "Muli";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 21px;
+  line-height: 32px;
+  color: rgba(125, 121, 135, 1);
+}
+.block-text hr {
+  width: 56px;
+  border: 2px solid black;
+  border-radius: 5px;
+  display: flex;
+  justify-content: baseline;
+}
+.projects-block img {
+  width: 665px;
+  height: 434px;
+  display: block;
+}
+.st {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 260px;
+}
+.projects {
+  margin: 54px 192px 251px 280px;
 }
